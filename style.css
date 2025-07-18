@@ -1,0 +1,353 @@
+body {
+  font-family: 'Comic Neue', cursive; /* Fuente general para el cuerpo */
+  background-color: #EDE7F6; /* Morado muy claro, casi lavanda */
+  color: #4A148C; /* Morado oscuro para el texto general, muy visible */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #D1C4E9; /* Morado pastel un poco más oscuro */
+  padding: 20px;
+  text-align: center;
+  color: #673AB7; /* Morado medio vibrante para el texto del header */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Para posicionar las figuras */
+  overflow: hidden; /* Para que las figuras no se salgan */
+}
+
+/* Figuritas para el header */
+.header-decoration-top-left {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 2em;
+  color: #FDD835; /* Amarillo brillante para la estrella */
+  animation: twinkle 2s infinite alternate;
+}
+
+.header-decoration-bottom-right {
+  position: absolute;
+  bottom: 5px;
+  right: 30px;
+  font-size: 2.5em;
+  color: #F44336; /* Rojo brillante para el globo */
+  animation: float 3s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { transform: scale(1); opacity: 0.8; }
+  to { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes float {
+  from { transform: translateY(0); opacity: 0.9; }
+  to { transform: translateY(-10px); opacity: 1; }
+}
+
+header h1 {
+  font-family: 'Bangers', cursive; /* ¡Tipografía 'Bangers' para el título principal! */
+  font-size: 5.5em;
+  margin: 10px 0 0 0;
+  text-shadow: 3px 3px 0px rgba(255,255,255,0.7), 5px 5px 0px rgba(0,0,0,0.1);
+  color: #9C27B0; /* Morado brillante para el título */
+  animation: bounce 2s infinite ease-in-out;
+  line-height: 1.0; /* Ajuste para que no ocupe demasiado espacio vertical */
+}
+
+/* Nuevo estilo para el logo dentro del encabezado */
+header .logo-container {
+    margin-bottom: 10px;
+}
+
+header .logo-container img {
+    max-width: 200px; /* Un poco más pequeño para dejar espacio */
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid #BA68C8; /* Morado claro para el borde del logo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+nav {
+  background-color: #CE93D8; /* Morado lavanda medio */
+  padding: 10px 20px; /* Más padding horizontal */
+  display: flex;
+  justify-content: space-around; /* Espacio uniforme entre los enlaces */
+  flex-wrap: wrap;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 95%; /* Un poco más ancho */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Para las figuras de la navegación */
+  overflow: hidden;
+}
+
+/* Figuritas para la navegación */
+.nav-decoration-top-left {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  font-size: 1.8em;
+  color: #E91E63; /* Rosa brillante para la paleta */
+  animation: spin 4s infinite linear;
+}
+
+.nav-decoration-bottom-right {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  font-size: 1.5em;
+  color: #64DD17; /* Verde brillante para el caramelo */
+  animation: nudge 5s infinite alternate;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+nav a {
+  color: #4A148C; /* Morado oscuro para los enlaces, muy visible */
+  text-decoration: none;
+  margin: 8px 15px; /* Ajuste de márgenes */
+  font-size: 1.5em;
+  background-color: #F3E5F5; /* Morado muy pálido, casi blanco, para el fondo del botón */
+  padding: 10px 18px; /* Ajuste de padding */
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+nav a:hover {
+  background-color: #E1BEE7; /* Morado más oscuro al pasar el ratón */
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative; /* Para figuras en el main */
+}
+
+/* Figurita para el main */
+.main-decoration-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3em;
+  color: #FFF9C4; /* Amarillo muy claro */
+  opacity: 0.7;
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 0.7; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.1); }
+}
+
+section {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #ffffff; /* Blanco limpio */
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  text-align: center;
+  border: 2px solid #BA68C8; /* Morado claro, como el borde del logo */
+  transition: transform 0.3s ease;
+  position: relative; /* Para figuras dentro de la card */
+  overflow: hidden;
+}
+
+/* Figurita para la card */
+.card-decoration-bottom-left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 1.5em;
+  color: #7E57C2; /* Morado medio */
+  opacity: 0.6;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 15px;
+  border: 3px solid #8E24AA; /* Morado más oscuro para el borde de la imagen */
+}
+
+/* Estilo para la sección del formulario: inicialmente oculta */
+#crear-cuenta-section {
+  display: none;
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #ffffff; /* Blanco para el pop-up */
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 550px;
+  width: 90%;
+  border: 3px solid #CE93D8; /* Morado lavanda, como el nav */
+  text-align: center;
+}
+
+/* Estilo para los elementos del formulario dentro de la sección */
+#crear-cuenta-section form {
+    padding: 0;
+    box-shadow: none;
+    text-align: center;
+}
+
+#crear-cuenta-section h2 {
+    color: #673AB7; /* Morado medio vibrante, como el texto del header */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.7);
+}
+
+#crear-cuenta-section label {
+    font-size: 1.4em;
+    color: #4A148C; /* Morado oscuro, muy visible */
+    margin-top: 10px;
+    display: block;
+}
+
+#crear-cuenta-section input::placeholder {
+  color: #B39DDB; /* Morado claro para el placeholder */
+}
+
+#crear-cuenta-section input[type="text"],
+#crear-cuenta-section input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 2px solid #D1C4E9; /* Morado pastel, como el header */
+    border-radius: 10px;
+    font-size: 1.2em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#crear-cuenta-section input[type="text"]:focus,
+#crear-cuenta-section input[type="password"]:focus {
+    border-color: #8E24AA; /* Morado más oscuro al enfocar */
+    box-shadow: 0 0 8px rgba(142, 36, 170, 0.5); /* Sombra morada al enfocar */
+}
+
+#crear-cuenta-section button[type="submit"] {
+    background-color: #81C784; /* Verde menta para un toque de contraste */
+    color: #388E3C; /* Verde oscuro para el texto, muy visible */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.8em;
+    margin-top: 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#crear-cuenta-section button[type="submit"]:hover {
+    background-color: #66BB6A; /* Verde un poco más oscuro al pasar el ratón */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Estilo para el botón de cerrar */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #9C27B0; /* Morado brillante, como el título */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.close-button:hover {
+  color: #7B1FA2; /* Morado más oscuro al pasar el ratón */
+  transform: rotate(90deg);
+}
+
+/* Estilo para el overlay (fondo oscuro cuando el pop-up está activo) */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Un poco más oscuro para que el pop-up resalte */
+  z-index: 999;
+}
+
+/* Estilos para el párrafo principal */
+.main-content-paragraph {
+  color: #4A148C; /* Morado oscuro, muy visible */
+  font-size: 1.8em;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 15px;
+  max-width: 2000px;
+  margin: 50px auto;
+}
+
+footer {
+  background-color: #D1C4E9; /* Morado pastel, como el header */
+  text-align: center;
+  padding: 20px;
+  color: #673AB7; /* Morado medio vibrante, como el texto del header */
+  font-size: 1.1em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Para figuras en el footer */
+  overflow: hidden;
+}
+
+/* Figurita para el footer */
+.footer-decoration-left {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 1.2em;
+  color: #B388FF; /* Morado más claro */
+  animation: slide 6s infinite linear;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); opacity: 0.5; }
+  50% { transform: translateX(10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 0.5; }
+}

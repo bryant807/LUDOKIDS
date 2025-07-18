@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aprende Jugando</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Bangers&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-decoration-top-left">⭐</div>
+    <div class="header-decoration-bottom-right">🎈</div>
+    <div class="logo-container">
+      <img src="Logo-removebg-preview (1).png" alt="Logo Aprende Jugando" />
+    </div>
+    <h1>🌟 Aprende Jugando 🌟</h1>
+    <p>¡Diversión y aprendizaje para niños de preescolar!</p>
+  </header>
+
+  <nav>
+    <div class="nav-decoration-top-left">🍭</div>
+    <div class="nav-decoration-bottom-right">🍬</div>
+    <a href="#inicio">Inicio</a>
+    <a href="#juegos">Juegos</a>
+    <a href="#videos">Videos</a>
+    <a href="#dibujar">Dibujar</a>
+    <a href="#" id="mostrarCrearCuenta">Crear Cuenta</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+<p class="main-content-paragraph">
+  ¡Hola, pequeños exploradores y amantes de la diversión! Han llegado a un lugar verdaderamente especial, un espacio mágico creado pensando solo en ustedes. Aquí en "APRENDE JUGANDO", hemos preparado un universo lleno de juegos, actividades y cuentos asombrosos que los esperan. 
+  Prepárense para sumergirse en un mundo vibrante, lleno de colores vivos, personajes fascinantes y aventuras emocionantes que los acompañarán en cada paso. Juntos, descubriremos un sinfín de actividades diseñadas para que se diviertan mientras aprenden algo nuevo cada día. Encontrarán desafíos que despertarán su mente, enigmas que pondrán a prueba su ingenio y cuentos que los transportarán a lugares increíbles sin salir de casa. 
+  Sabemos que la mejor manera de crecer es a través del disfrute, por eso, cada juego y cada historia están diseñados para que el aprendizaje sea divertido y sencillo. En "APRENDE JUGANDO", queremos que cada visita sea una experiencia llena de alegría, descubrimientos y risas. Aquí no solo se trata de jugar, sino de entender el mundo que nos rodea, adquirir nuevas ideas y desarrollar habilidades importantes mientras se divierten. 
+  ¡Prepárense para una aventura inolvidable! Aquí encontrarán amigos, juegos, cuentos y muchas sorpresas que los harán querer regresar una y otra vez. Nos encanta tenerlos con nosotros y esperamos que disfruten cada instante en este lugar hecho con mucho amor para ustedes. 
+  ¡Bienvenidos a "APRENDE JUGANDO", donde la diversión y el aprendizaje van siempre de la mano! 
+</p>
+ 
+<div class="overlay" id="overlay"></div>
+
+<section id="crear-cuenta-section">
+  <span class="close-button" id="closeButton">&times;</span>
+  <form action="/crear-cuenta" method="POST" style="text-align: center; font-size: 2.0em; line-height: 1.0;">
+    <h2>Crear Cuenta</h2>
+    <label for="nuevoUsuario">Usuario:</label><br>
+    <input type="text" id="nuevoUsuario" name="nuevoUsuario" placeholder="Escribe tu usuario aquí" required><br><br>
+
+    <label for="nuevaClave">Contraseña:</label><br>
+    <input type="password" id="nuevaClave" name="nuevaClave" placeholder="Crea tu contraseña" required><br><br>
+
+    <label for="confirmarClave">Confirmar Contraseña:</label><br>
+    <input type="password" id="confirmarClave" name="confirmarClave" placeholder="Confirma tu contraseña" required><br><br>
+
+    <button type="submit">Crear Cuenta</button>
+  </form>
+</section>
+
+<footer>
+    <div class="footer-decoration-left">🎵</div>
+    <p>© 2025 Aprende Jugando - Todos los derechos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
